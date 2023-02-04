@@ -1,11 +1,11 @@
-use v5.36;
+use v5.37;
 use Object::Pad;
 
 package Chrome::Policy::Strict;
 role Chrome::Policy::Strict;
 use experimental qw( builtin );
 use builtin qw( true false );
-use JSON::PP;
+use JSON::PP qw();
 use Data::Printer;
 use Path::Tiny;
 
@@ -18,7 +18,8 @@ field %policy = (
 );
 
 method set_strict_policy ( $name = 'strict.json' , $type = 'managed' ) {
-  my $policy = encode_json \%policy;
+  my $json = JSON::PP -> new -> pretty( true );
+  my $policy = $json -> encode( \%policy );
   # p $policy;
   my $file;
   if ( $type eq 'managed' ) {
@@ -26,14 +27,4 @@ method set_strict_policy ( $name = 'strict.json' , $type = 'managed' ) {
   }
   $file -> print( $policy );
   $file -> close;
-}
-
-1;
-
-__DATA__
-
-{
-  "ForceGoogleSafeSearch": true,
-  "ForceYouTubeRestrict": 1,
-  "SafeSitesFilterBehavior": 1,
 }

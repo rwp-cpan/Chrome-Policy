@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="InjectionMarkers">
+    <MARKERS_MAP>
+      <map>
+        <entry key="PROP" value="Properties" />
+        <entry key="SHELL" value="Shell Script" />
+      </map>
+    </MARKERS_MAP>
+  </component>
   <component name="Perl5LocalSettings">
     <option name="perlInterpreter" value="Local, Perlbrew[perl-5.37.8]: Perl 5.37.8" />
   </component>

@@ -1,6 +1,6 @@
 # ABSTRACT: Chrome Policy class
 
-use v5.36;
+use v5.37;
 use Object::Pad ':experimental';
 
 package Chrome::Policy;
