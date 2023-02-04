@@ -10,7 +10,7 @@ use Data::Printer;
 use Path::Tiny;
 
 # @formatter:off
-field %strict_policy = (
+field %policy = (
 # @formatter:on
   ForceGoogleSafeSearch   => true ,
   ForceYouTubeRestrict    => 1 ,
@@ -18,7 +18,7 @@ field %strict_policy = (
 );
 
 method set_strict_policy ( $name = 'strict.json' , $type = 'managed' ) {
-  my $policy = encode_json \%strict_policy;
+  my $policy = encode_json \%policy;
   # p $policy;
   my $file;
   if ( $type eq 'managed' ) {
