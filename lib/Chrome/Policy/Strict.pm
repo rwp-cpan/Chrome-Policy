@@ -1,3 +1,5 @@
+# ABSTRACT: Chrome strict policy role
+
 use v5.37;
 use Object::Pad;
 
