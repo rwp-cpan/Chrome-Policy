@@ -3,4 +3,7 @@
   <component name="Perl5LocalSettings">
     <option name="perlInterpreter" value="Local, Perlbrew[perl-5.37.8]: Perl 5.37.8" />
   </component>
+  <component name="Perl5XSubsState">
+    <option name="isActual" value="false" />
+  </component>
 </project>

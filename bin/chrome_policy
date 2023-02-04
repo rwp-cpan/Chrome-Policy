@@ -1,0 +1,17 @@
+#! /usr/bin/env perl
+
+# PODNAME: chrome_policy
+# ABSTRACT: Set Chrome policies
+
+use v5.36;
+use lib '/home/regular/IdeaProjects/Chrome-Policy/lib';
+use Chrome::Policy::Chrome;
+
+my $policy = Chrome::Policy::Chrome -> new;
+# say $policy -> managed_policy_path;
+$policy -> set_strict_policy;
+
+
+=pod
+
+sudo /home/regular/perl5/perlbrew/perls/perl-5.37.8/bin/perl -I /home/regular/perl5/perlbrew/perls/perl-5.37.8/bin/perl chrome_policy

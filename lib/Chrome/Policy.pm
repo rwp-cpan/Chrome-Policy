@@ -1,20 +1,10 @@
 use v5.36;
-use Object::Pad;
+use Object::Pad ':experimental';
 
 package Chrome::Policy;
 class Chrome::Policy :does(Chrome::Policy::Strict);
 use URI;
-field url = URI -> new ('chrome://policy/');
-
-1;
-
-__DATA__
-
-{
-  "ForceGoogleSafeSearch": true,
-  "ForceYouTubeRestrict": 1,
-  "SafeSitesFilterBehavior": 1,
-}
+# field url = URI -> new ('chrome://policy/');
 
 =pod
 
