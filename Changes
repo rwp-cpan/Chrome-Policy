@@ -4,6 +4,8 @@ This is a changelog file in addition to git commit messages.
 
 {{$NEXT}}
 
+0.230360  2023-02-05 04:50:40+04:00 Asia/Baku
+
   * Add GetOpt::Long::Parser OO option parsing
   * Use JSON::PP OO-style with the pretty method
   * Add correct path for Chrome::Policy::Chromium path
