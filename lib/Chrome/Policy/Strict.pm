@@ -19,6 +19,20 @@ field %policy = (
   SafeSitesFilterBehavior => 1 ,
 );
 
+=method set_strict_policy([$name, $type])
+
+Apply strict policy set using Chrome policies below:
+
+  ForceGoogleSafeSearch: true
+  ForceYouTubeRestrict: 1
+  SafeSitesFilterBehavior: 1
+
+C<$name> is policy file name (F<strict.json> by default)
+
+C<$type> is "managed" by default, but may also be "recommended" as per the policy specification
+
+=cut
+
 method set_strict_policy ( $name = 'strict.json' , $type = 'managed' ) {
   my $json = JSON::PP -> new -> pretty( true );
   my $policy = $json -> encode( \%policy );
